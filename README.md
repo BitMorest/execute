@@ -2,55 +2,83 @@
 
 The excecute native command in nodejs with parallel or sequentially mode
 
-![screenshot](https://raw.githubusercontent.com/BitMorest/execute/master/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/BitMorest/execute/master/screenshoot.png)
 
 ## Install
 
+```shell
 npm install @bitmorest/excecute
+```
 
 ## Usage
 
-```
-import executer from '@bitmorest/excecute';
+### Basic usage
 
+```typescript
+import executer from '@bitmorest/excecute';
+executer.runSequentially(arrayOfCommand, options);
+executer.runParallel(arrayOfCommand, options);
+```
+
+### Examples
+
+```typescript
 // for sequentially mode
 executer.runSequentially([
-    {
-        cmd: `ls`,
-        label: "types",
-    },
-    {
-        cmd: `ls`,
-        label: "electron",
-        cwd: __dirname
-    },
+	{
+		cmd: `ls`,
+		label: 'types',
+	},
+	{
+		cmd: `ls`,
+		label: 'electron',
+		cwd: __dirname,
+	},
 ]);
 
 // for parallel mode
 executer.runParallel([
-    {
-        cmd: `ls`,
-        label: "types",
-    },
-    {
-        cmd: `ls`,
-        label: "electron",
-        cwd: __dirname
-    },
+	{
+		cmd: `ls`,
+		label: 'types',
+	},
+	{
+		cmd: `ls`,
+		label: 'electron',
+		cwd: __dirname,
+	},
 ]);
 
+// Silent mode
+executer.runParallel(
+	[
+		{
+			cmd: `ls`,
+			label: 'types',
+		},
+		{
+			cmd: `ls`,
+			label: 'electron',
+			cwd: __dirname,
+		},
+	],
+	{silent: true}
+);
 
 // you can use aggregate output
 // this feature is useful when running tests. You want a full report
-executer.runParallel([
-    {
-        cmd: `ls`,
-        label: "types",
-    },
-    {
-        cmd: `ls`,
-        label: "electron",
-        cwd: __dirname
-    },
-], { aggregateOutput: true });
+executer.runParallel(
+	[
+		{
+			cmd: `ls`,
+			label: 'types',
+		},
+		{
+			cmd: `ls`,
+			label: 'electron',
+			cwd: __dirname,
+		},
+	],
+	{aggregateOutput: true}
+);
 ```
