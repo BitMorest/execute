@@ -42,11 +42,14 @@ class Executer {
 			if (command.cwd) {
 				command.cmd = `cd ${command.cwd} && ${command.cmd}`;
 			}
-			exec(command.cmd)
-				.stdout.on('data', function (data) {
-					process.stdout.write(`${command.label} ${data}`);
-				})
-				.on('close', resolve);
+			const childProcess = exec(command.cmd);
+			childProcess.stdout.on('data', function (data) {
+				process.stdout.write(`${command.label} ${data}`);
+			});
+			childProcess.stderr.on('data', function (data) {
+				process.stderr.write(`${command.label} \x1b[31m${data}\x1b[0m`);
+			});
+			childProcess.on('close', resolve);
 		});
 	}
 

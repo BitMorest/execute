@@ -1,12 +1,13 @@
 {
 	"name": "@bitmorest/excecute",
-	"version": "0.0.7",
+	"version": "0.1.1",
 	"description": "The excecute native command in nodejs with parallel or sequentially mode",
 	"author": "John Martin <john.itvn@gmail.com>",
 	"main": "dist/index.js",
 	"license": "MIT",
 	"scripts": {
 		"start": "yarn test --watch",
+		"prepublishOnly": "yarn build",
 		"build": "tsc -p tsconfig.json",
 		"test": "jest -c jest.config.js",
 		"test-ci": "jest --ci --coverage",

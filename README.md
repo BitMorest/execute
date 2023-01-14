@@ -1,8 +1,8 @@
-![Coverage](./badges/coverage-jest%20coverage.svg)
-![Branches](./badges/coverage-branches.svg)
-![Functions](./badges/coverage-functions.svg)
-![Lines](./badges/coverage-lines.svg)
-![Statements](./badges/coverage-statements.svg)
+![Coverage](https://raw.githubusercontent.com/BitMorest/execute/master/badges/coverage-jest%20coverage.svg)
+![Branches](https://raw.githubusercontent.com/BitMorest/execute/master/badges/coverage-branches.svg)
+![Functions](https://raw.githubusercontent.com/BitMorest/execute/master/badges/coverage-functions.svg)
+![Lines](https://raw.githubusercontent.com/BitMorest/execute/master/badges/coverage-lines.svg)
+![Statements](https://raw.githubusercontent.com/BitMorest/execute/master/badges/coverage-statements.svg)
 
 The excecute native command in nodejs with parallel or sequentially mode
 
