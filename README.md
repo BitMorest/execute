@@ -13,29 +13,31 @@ npm install @bitmorest/excecute
 ## Usage
 
 ```
-const {runSequentially, runParallel} = require('@bitmorest/excecute')
+import executer from '@bitmorest/excecute';
 
 // for sequentially mode
-runSequentially([
+executer.runSequentially([
     {
-        command: `cd ${dirname(__dirname)} && yarn workspace @bitmorest/stoner-shared-types build`,
+        cmd: `ls`,
         label: "types",
     },
     {
-        command: `cd ${dirname(__dirname)} && yarn workspace @bitmorest/stoner-electron build`,
+        cmd: `ls`,
         label: "electron",
+        cwd: __dirname
     },
 ]);
 
 // for parallel mode
-runParallel([
+executer.runParallel([
     {
-        command: `cd ${dirname(__dirname)} && yarn workspace @bitmorest/stoner-shared-types build`,
+        cmd: `ls`,
         label: "types",
     },
     {
-        command: `cd ${dirname(__dirname)} && yarn workspace @bitmorest/stoner-electron build`,
+        cmd: `ls`,
         label: "electron",
+        cwd: __dirname
     },
 ]);
 ```
