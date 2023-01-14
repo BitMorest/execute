@@ -1,11 +1,8 @@
 {
   "name": "@bitmorest/excecute",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The excecute native command in nodejs with parallel or sequentially mode",
   "author": "John Martin <john.itvn@gmail.com>",
   "main": "index.js",
-  "license": "MIT",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
+  "license": "MIT"
 }
