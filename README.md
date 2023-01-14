@@ -1,3 +1,5 @@
+![Coverage](./badges/coverage-jest%20coverage.svg)
+
 The excecute native command in nodejs with parallel or sequentially mode
 
 ## Install
