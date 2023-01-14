@@ -1,0 +1,13 @@
+.*
+*.json
+*.js
+src
+test
+badges
+coverage
+.tmp
+.github
+.husky
+!dist
+!package.json
+!README.md
