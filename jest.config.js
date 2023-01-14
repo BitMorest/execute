@@ -6,7 +6,6 @@ module.exports = {
 	testRegex: '^.*\\.spec\\.ts.*$',
 	testPathIgnorePatterns: ['./node_modules/', './dist/'],
 
-	coverageDirectory: '.coverage',
 	coverageReporters: ['json-summary', 'text'],
 	collectCoverageFrom: ['**/*.ts', '!dist/*', '!**/.tmp/**', '!**/node_modules/**'],
 };

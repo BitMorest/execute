@@ -1,10 +1,10 @@
-name: My ci things
+name: testing
 on:
   push:
     branches:
       - master
 jobs:
-  bump:
+  testing:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -33,4 +33,3 @@ jobs:
         uses: jpb06/jest-badges-action@latest
         with:
           branches: master
-          coverage-summary-path: ./coverage/coverage-summary.json
