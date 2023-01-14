@@ -5,7 +5,7 @@
 		"outDir": "dist",
 		"tsBuildInfoFile": ".tmp/tsbuildinfo.json",
 		"rootDir": "./src",
-		"module": "es2020",
+		"module": "CommonJS",
 		"target": "es2020",
 		"skipLibCheck": true,
 		"esModuleInterop": true,
