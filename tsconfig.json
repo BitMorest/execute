@@ -1,0 +1,23 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"baseUrl": ".",
+		"outDir": "dist",
+		"tsBuildInfoFile": ".tmp/tsbuildinfo.json",
+		"rootDir": "./src",
+		"module": "es2020",
+		"target": "es2020",
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"sourceMap": true,
+		"declaration": true,
+		"moduleResolution": "node",
+		"incremental": true,
+		"composite": true,
+		"types": ["node", "jest"]
+	},
+	"include": ["src/**/*"],
+	"exclude": ["src/**/*.spec.ts"]
+}
