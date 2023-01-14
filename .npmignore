@@ -1,6 +1,7 @@
 .*
 *.json
 *.js
+*.png
 src
 test
 badges
