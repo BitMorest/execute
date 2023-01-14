@@ -27,8 +27,44 @@ describe('Main spec', () => {
 			{
 				cmd: 'ls',
 				cwd: dirname(__dirname),
-				label: 'long label',
+				label: 'long label longer',
 			},
 		]);
+	});
+
+	test('Aggregate output mode', async () => {
+		await executer.runParallel(
+			[
+				{
+					cmd: 'ls',
+					cwd: __dirname,
+					label: 'label:test',
+				},
+				{
+					cmd: 'ls',
+					cwd: dirname(__dirname),
+					label: 'long label',
+				},
+			],
+			{aggregateOutput: true}
+		);
+	});
+
+	test('Slient output mode', async () => {
+		await executer.runParallel(
+			[
+				{
+					cmd: 'ls',
+					cwd: __dirname,
+					label: 'test-label',
+				},
+				{
+					cmd: 'ls',
+					cwd: dirname(__dirname),
+					label: 'long label 4',
+				},
+			],
+			{silent: true}
+		);
 	});
 });

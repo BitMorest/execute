@@ -8,6 +8,7 @@ export type Command = {
 
 export type ExecOptions = {
 	aggregateOutput?: boolean;
+	silent?: boolean;
 };
 
 class Executer {
@@ -46,7 +47,13 @@ class Executer {
 			if (command.cwd) {
 				command.cmd = `cd ${command.cwd} && ${command.cmd}`;
 			}
-			if (options?.aggregateOutput) {
+			if (options?.silent) {
+				const childProcess = exec(command.cmd);
+				childProcess.stderr.on('data', function (data) {
+					process.stderr.write(`${command.label} ${data}`);
+				});
+				childProcess.on('close', resolve);
+			} else if (options?.aggregateOutput) {
 				exec(command.cmd, (error, stdout, stderr) => {
 					for (const line of stdout.split('\n')) {
 						process.stdout.write(`${command.label} ${line}\n`);
@@ -54,6 +61,7 @@ class Executer {
 					for (const line of stderr.split('\n')) {
 						process.stderr.write(`${command.label} ${line}\n`);
 					}
+					resolve();
 				});
 			} else {
 				const childProcess = exec(command.cmd);
