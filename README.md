@@ -6,6 +6,8 @@
 
 The excecute native command in nodejs with parallel or sequentially mode
 
+![](https://raw.githubusercontent.com/BitMorest/execute/master/screenshot.png)
+
 ## Install
 
 npm install @bitmorest/excecute
@@ -40,4 +42,19 @@ executer.runParallel([
         cwd: __dirname
     },
 ]);
+
+
+// you can use aggregate output
+// this feature is useful when running tests. You want a full report
+executer.runParallel([
+    {
+        cmd: `ls`,
+        label: "types",
+    },
+    {
+        cmd: `ls`,
+        label: "electron",
+        cwd: __dirname
+    },
+], { aggregateOutput: true });
 ```

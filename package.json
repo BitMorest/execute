@@ -1,6 +1,6 @@
 {
 	"name": "@bitmorest/excecute",
-	"version": "0.1.1",
+	"version": "0.1.4",
 	"description": "The excecute native command in nodejs with parallel or sequentially mode",
 	"author": "John Martin <john.itvn@gmail.com>",
 	"main": "dist/index.js",
