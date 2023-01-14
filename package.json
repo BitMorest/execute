@@ -1,10 +1,18 @@
 {
 	"name": "@bitmorest/excecute",
-	"version": "0.1.9",
+	"version": "0.2.0",
 	"description": "The excecute native command in nodejs with parallel or sequentially mode",
-	"author": "John Martin <john.itvn@gmail.com>",
 	"main": "dist/index.js",
 	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/BitMorest/execute"
+	},
+	"author": {
+		"name": "John Martin",
+		"url": "https://github.com/johnitvn",
+		"email": "john.itvn@gmail.com"
+	},
 	"scripts": {
 		"start": "yarn test --watch",
 		"prepublishOnly": "yarn build",
