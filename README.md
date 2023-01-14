@@ -1,4 +1,8 @@
 ![Coverage](./badges/coverage-jest%20coverage.svg)
+![Branches](./badges/coverage-branches.svg)
+![Functions](./badges/coverage-functions.svg)
+![Lines](./badges/coverage-lines.svg)
+![Statements](./badges/coverage-statements.svg)
 
 The excecute native command in nodejs with parallel or sequentially mode
 
